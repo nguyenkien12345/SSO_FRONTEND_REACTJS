@@ -6,7 +6,7 @@ import { handleActionLogin } from '../../redux/actions/accountAction'
 function CodeSSO() {
     const [searchParams, setSearchParams] = useSearchParams();
     // Chúng ta sẽ khắc phục lỗi render 2 lần mà React.StrictMode gây ra bằng useRef (Tuyệt đối không tắt React.StrictMode trong index.js)
-    // Mỗi khi ta modify giá trị của biến ref thì nó sẽ không bị rerender
+    // Mỗi khi ta modify giá trị của biến ref thì nó sẽ không bị rerender lại
     const firstRunRef = useRef(false);
     const navigate = useNavigate();
     const dispatch = useDispatch();
